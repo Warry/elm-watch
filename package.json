@@ -1,0 +1,19 @@
+{
+  "name": "elm-watch",
+  "version": "0.0.1",
+  "description": "File watcher for elm, with errors displayed in the browser",
+  "main": "elm-watch",
+  "dependencies": {
+    "chokidar": "^0.12.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "elm",
+    "watch"
+  ],
+  "author": "Maxime Dantec",
+  "license": "ISC"
+}

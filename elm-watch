@@ -18,11 +18,11 @@ console.log("Watching: ", file);
 
 require('chokidar').watch(folder, {ignored: /(node_modules|elm-stuff)/}).on('all', function(event, path) {
   if ((event == "add" || event == "change") && path.slice(-4) == ".elm") {
-    compile(source, destination);
+    compile();
   }
 });
 
-function compile(source, destination) {
+function compile() {
   console.log("Compiling...", source)
   exec("elm-make --yes --output " + destination + " " + source, function(error, stdout, stderr) {
     var content;
@@ -42,3 +42,5 @@ function compile(source, destination) {
 
 }
 
+// Compile on start
+compile();
